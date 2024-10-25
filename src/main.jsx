@@ -1,24 +1,25 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import DemoPage from './pages/demoPage.jsx'
-import './index.css'
-import Home from './Home.jsx'
-import Example from './pages/example.jsx';
+import DemoPage from "./pages/demoPage.jsx";
+import "./index.css";
+import Home from "./Home.jsx";
+import Example from "./pages/example.jsx";
+import Venus from "./pages/venus.jsx";
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Router>
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/example' element={<Example />} />
-        <Route path='/demo' element={<DemoPage />} />
-        <Route path='/profile/:name' element={<ProfileRouter />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/example" element={<Example />} />
+        <Route path="/demo" element={<DemoPage />} />
+        <Route path="/profile/:name" element={<ProfileRouter />} />
       </Routes>
     </Router>
-  </StrictMode>,
-)
+  </StrictMode>
+);
 
 function ProfileRouter() {
   const { name } = useParams();
@@ -28,8 +29,8 @@ function ProfileRouter() {
       return <DemoPage />;
 
     // Change <DemoPage /> to your custom profile page, and change the case to your name
-    case "Person1":
-      return <DemoPage />;
+    case "Venus":
+      return <Venus />;
     case "Person2":
       return <DemoPage />;
     case "Person3":
@@ -43,7 +44,7 @@ function ProfileRouter() {
     case "Person7":
       return <DemoPage />;
     case "Person8":
-        return <DemoPage />;
+      return <DemoPage />;
     case "Person9":
       return <DemoPage />;
     case "Person10":
