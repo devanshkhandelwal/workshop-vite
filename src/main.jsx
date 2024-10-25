@@ -6,6 +6,7 @@ import DemoPage from './pages/demoPage.jsx'
 import './index.css'
 import Home from './Home.jsx'
 import Example from './pages/example.jsx';
+import Prithika from './pages/prithika.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -28,8 +29,8 @@ function ProfileRouter() {
       return <DemoPage />;
 
     // Change <DemoPage /> to your custom profile page, and change the case to your name
-    case "Person1":
-      return <DemoPage />;
+    case "prithika":
+      return <Prithika/>;
     case "Person2":
       return <DemoPage />;
     case "Person3":
